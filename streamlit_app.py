@@ -11,5 +11,5 @@ df=pandas.DataFrame(my_data_rows)
 
 option = streamlit.selectbox('Pick a sweatsuit color or style', list(df[0].values.tolist()))
 my_cur.execute("select distinct direct_url from ZENAS_ATHLEISURE_DB.PRODUCTS.catalog_for_website where color_or_style='" + option +"';")
-#streamlit.image(my_cur.fetchone()[0],widht=400,caption='Test')
+streamlit.image(my_cur.fetchone()[0],width=400,caption='Test')
 streamlit.write('URL:', my_cur.fetchone()[0])
