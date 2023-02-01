@@ -11,5 +11,5 @@ streamlit.text("Hello from Snowflake:")
 streamlit.text(my_data_row)
 
 
-option = streamlit.selectbox('How would you like to be contacted?', color_or_style)
+option = streamlit.selectbox('How would you like to be contacted?', my_data_row)
 streamlit.write('You selected:', option)
