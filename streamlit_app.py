@@ -9,6 +9,6 @@ my_cur.execute("select distinct color_or_style from ZENAS_ATHLEISURE_DB.PRODUCTS
 my_data_rows = my_cur.fetchall()
 df=pandas.DataFrame(my_data_rows)
 streamlit.write(my_data_rows)
-streamlit.write(df[0])
+streamlit.write(df[0].values)
 option = streamlit.selectbox('Pick a sweatsuit color or style', my_data_rows)
 streamlit.write('You selected:', option)
